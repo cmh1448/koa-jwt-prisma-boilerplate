@@ -1,0 +1,38 @@
+{
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "prisma": "^4.1.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.1.0",
+    "@types/koa": "^2.13.5",
+    "koa": "^2.13.4",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.7.4",
+    "winston": "^3.8.1",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "name": "koa-jwt-prisma-boilderplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --watch '*.ts' -e ts,js,json --exec './node_modules/.bin/ts-node ./src/index.ts'"
+  },
+  "author": "cmh1448",
+  "license": "MIT",
+  "description": "koa boilderplate",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmh1448/koa-jwt-prisma-boilerplate.git"
+  },
+  "keywords": [
+    "koa"
+  ],
+  "bugs": {
+    "url": "https://github.com/cmh1448/koa-jwt-prisma-boilerplate/issues"
+  },
+  "homepage": "https://github.com/cmh1448/koa-jwt-prisma-boilerplate#readme"
+}
