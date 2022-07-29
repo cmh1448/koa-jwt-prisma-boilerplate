@@ -1,9 +1,12 @@
 import dotenv from 'dotenv';
 import koa from 'koa';
-import logger from './configuration/log/logger';
+import logger from "./system/log/logger";
+import dbSetup from "./system/database/dbSetup";
 
 dotenv.config();
 const app = new koa();
+
+dbSetup();
 
 
 app.listen(5000, () => {
