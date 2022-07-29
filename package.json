@@ -7,6 +7,7 @@
     "@prisma/client": "^4.1.0",
     "@types/koa": "^2.13.5",
     "koa": "^2.13.4",
+    "koa-passport": "^5.0.0",
     "nodemon": "^2.0.19",
     "ts-node": "^10.9.1",
     "tsc-watch": "^5.0.3",
