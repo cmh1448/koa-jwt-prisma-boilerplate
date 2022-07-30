@@ -17,33 +17,12 @@ model User {
   stateMessage    String
   password        String
   salt            String
-  friends         User[]  @relation("friends")
-  friendsRelation User[]  @relation("friends")
   role            Role    @default(USER)
-  rooms           Room[]  @relation(name: "owner")  
-  ownedRooms      Room[] 
-  messages        Message[] @relation(name: "from")
+  ownedRooms      Room[]
 }
 
 enum Role {
   ADMIN
   USER
-}
-
-model Room {
-  id        Int     @id @default(autoincrement())
-  users     User[]
-  owner     User    @relation(name: "owner",fields: [ownerId], references: [id])
-  ownerId   Int
-  messages  Message[]
-}
-
-model Message {
-  id        BigInt  @id @default(autoincrement())
-  from      User  @relation(name: "from", fields: [fromId], references: [id])
-  fromId    Int
-
-  room      Room  @relation(fields: [roomId], references: [id])
-  roomId    Int
 }
 
