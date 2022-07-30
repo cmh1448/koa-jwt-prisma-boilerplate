@@ -3,6 +3,7 @@ export const toUserDetail = (user :any) => {
     id: user.id,
     name: user.name,
     email: user.email,
-    stateMessage: user.stateMessage
+    stateMessage: user.stateMessage,
+    role: user.role
   }
 }
