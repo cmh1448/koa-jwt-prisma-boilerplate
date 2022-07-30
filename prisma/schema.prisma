@@ -18,7 +18,6 @@ model User {
   password        String
   salt            String
   role            Role    @default(USER)
-  ownedRooms      Room[]
 }
 
 enum Role {
