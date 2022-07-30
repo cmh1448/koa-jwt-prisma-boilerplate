@@ -16,6 +16,7 @@ model User {
   name            String
   stateMessage    String
   password        String
+  salt            String
   friends         User[]  @relation("friends")
   friendsRelation User[]  @relation("friends")
   role            Role    @default(USER)
