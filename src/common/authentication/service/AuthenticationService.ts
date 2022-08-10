@@ -4,7 +4,6 @@ import passport from "koa-passport";
 import logger from "../../../system/log/logger";
 import {createAccessToken, createHashedPassword, createRefreshToken} from "../../../system/security/securityutil";
 import prisma from "../../../system/database/prisma";
-import Prisma from "../../../system/database/prisma";
 
 export const login = async (ctx: RouterContext, next: Next) => {
   await passport.authenticate(
